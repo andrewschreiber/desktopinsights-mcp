@@ -6,6 +6,12 @@ export function registerCategoryTools(server: McpServer) {
   server.tool(
     'list_sdk_categories',
     'List all 11 SDK categories tracked by Desktop Insights with their API field names and example SDKs for each. Use this to discover what filters are available for search_apps, or to understand the sdkSummary fields returned by lookup_app.',
+    {
+      title: 'List SDK categories',
+      readOnlyHint: true,
+      destructiveHint: false,
+      openWorldHint: false,
+    },
     async () => {
       const lines = SDK_CATEGORIES.map(
         (cat) =>

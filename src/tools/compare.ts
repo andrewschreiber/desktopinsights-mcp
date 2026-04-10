@@ -110,6 +110,12 @@ export function registerCompareTools(
           'Platform to compare on (recommended when apps exist on both)',
         ),
     },
+    {
+      title: 'Compare app technology stacks',
+      readOnlyHint: true,
+      destructiveHint: false,
+      openWorldHint: true,
+    },
     async ({ app1, app2, platform }) => {
       try {
         const [result1, result2] = await Promise.all([

@@ -95,6 +95,12 @@ export function registerSearchTools(
           .optional()
           .describe('Pagination offset (default 0)'),
     },
+    {
+      title: 'Search apps by technology',
+      readOnlyHint: true,
+      destructiveHint: false,
+      openWorldHint: true,
+    },
     async (args) => {
       try {
         const { limit: _limit, offset: _offset, ...filterFields } = args;

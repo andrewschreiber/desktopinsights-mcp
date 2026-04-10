@@ -97,6 +97,12 @@ export function registerLookupTools(
         .optional()
         .describe('Filter by platform. Omit to search both.'),
     },
+    {
+      title: 'Look up app technology stack',
+      readOnlyHint: true,
+      destructiveHint: false,
+      openWorldHint: true,
+    },
     async ({ app, platform }) => {
       try {
         const response = await client.lookup(app, platform);

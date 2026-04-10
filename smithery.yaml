@@ -1,13 +1,23 @@
+displayName: Desktop Insights
+icon: https://desktopinsights.com/images/favicon/favicon-32x32.png
 startCommand:
   type: stdio
   configSchema:
     type: object
+    title: Desktop Insights MCP Configuration
+    description: Configuration for the Desktop Insights MCP server
     required:
       - apiKey
     properties:
       apiKey:
         type: string
-        description: "Desktop Insights API key (get one at https://desktopinsights.com/home)"
+        title: API Key
+        description: "Desktop Insights API key (get one at https://desktopinsights.com/settings/api)"
+      apiUrl:
+        type: string
+        title: API URL
+        description: "Custom API base URL (optional, for self-hosted instances)"
+        default: "https://desktopinsights.com"
   commandFunction:
     - |-
-      (config) => ({ command: 'npx', args: ['-y', 'desktopinsights-mcp'], env: { DESKTOPINSIGHTS_API_KEY: config.apiKey } })
+      (config) => ({ command: 'npx', args: ['-y', 'desktopinsights-mcp'], env: { DESKTOPINSIGHTS_API_KEY: config.apiKey, ...(config.apiUrl ? { DESKTOPINSIGHTS_API_URL: config.apiUrl } : {}) } })

@@ -1,6 +1,6 @@
 {
   "name": "desktopinsights-mcp",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "MCP server for Desktop Insights — look up SDKs, frameworks, and dependencies used by 12,000+ macOS and Windows desktop applications",
   "main": "./build/index.js",
   "bin": {
