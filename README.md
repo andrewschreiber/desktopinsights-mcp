@@ -1,5 +1,8 @@
 # Desktop Insights MCP Server
 
+[![Smithery](https://smithery.ai/badge/andrew-schreiber1/desktopinsights)](https://smithery.ai/servers/andrew-schreiber1/desktopinsights)
+[![npm](https://img.shields.io/npm/v/desktopinsights-mcp)](https://www.npmjs.com/package/desktopinsights-mcp)
+
 MCP server for [Desktop Insights](https://desktopinsights.com) — look up SDKs, frameworks, and dependencies used by 12,000+ macOS and Windows desktop applications.
 
 ## Quick Start
