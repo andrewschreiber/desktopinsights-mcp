@@ -1,0 +1,13 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - apiKey
+    properties:
+      apiKey:
+        type: string
+        description: "Desktop Insights API key (get one at https://desktopinsights.com/home)"
+  commandFunction:
+    - |-
+      (config) => ({ command: 'npx', args: ['-y', 'desktopinsights-mcp'], env: { DESKTOPINSIGHTS_API_KEY: config.apiKey } })

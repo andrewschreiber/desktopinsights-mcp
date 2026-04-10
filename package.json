@@ -1,0 +1,41 @@
+{
+  "name": "desktopinsights-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Desktop Insights — look up SDKs, frameworks, and dependencies used by 12,000+ macOS and Windows desktop applications",
+  "main": "./build/index.js",
+  "bin": {
+    "desktopinsights-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "mcp",
+    "desktop-insights",
+    "sdk",
+    "builtwith",
+    "desktop-apps",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AvaArt/desktopinsights-mcp"
+  },
+  "homepage": "https://desktopinsights.com",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.24.3",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
